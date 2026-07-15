@@ -285,3 +285,43 @@ nav { margin-bottom: 60px; display: flex; justify-content: space-between; align-
 .section-block.visible { opacity: 1; transform: translateY(0); }
 
 .cyber-footer { margin-top: 100px; border-top: 1px solid #333; padding-top: 30px; text-align: center; }
+
+/* -------------------
+   RESPONSIVE (MOBILE/TABLET)
+------------------- */
+@media (max-width: 900px) {
+    .hud-bottom-left, .scanlines { opacity: 0.3; }
+    .hud-top-right, .hud-top-left, .hud-bottom-right { transform: scale(0.8); transform-origin: top right; }
+    .hud-top-left { transform-origin: top left; }
+    .hud-bottom-right { transform-origin: bottom right; }
+
+    .hero-name { font-size: 3rem; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .skill-tree { grid-template-columns: repeat(2, 1fr); }
+    
+    nav { flex-direction: column; gap: 20px; }
+    .links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+}
+
+@media (max-width: 600px) {
+    #main-content { padding: 80px 15px; }
+    
+    .hud-top-right, .hud-top-left, .hud-bottom-right { transform: scale(0.6); }
+    .crosshair { width: 15px; height: 15px; }
+    .top-left { top: 10px; left: 10px; }
+    .top-right { top: 10px; right: 10px; }
+    .bottom-left { bottom: 10px; left: 10px; }
+    .bottom-right { bottom: 10px; right: 10px; }
+
+    .hero-name { font-size: 2rem; }
+    .stats-grid { grid-template-columns: 1fr; }
+    .skill-tree { grid-template-columns: 1fr; }
+    .clip-panel { padding: 20px; }
+    .cyber-card { padding: 15px; }
+    
+    .schematic-card { flex-direction: column; gap: 15px; overflow: hidden; }
+    .schematic-img { overflow-x: auto; max-width: 100%; padding-bottom: 10px; }
+    .schematic-img pre { font-size: 0.5rem; }
+    
+    .mission-stats { flex-direction: column; gap: 5px; }
+}
