@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramiz Shaikh | Operative HUD</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- PERSISTENT HUD OVERLAYS -->
+    <div class="hud-overlay">
+        <div class="scanlines"></div>
+        <div class="vignette"></div>
+        <div class="crosshair top-left"></div>
+        <div class="crosshair top-right"></div>
+        <div class="crosshair bottom-left"></div>
+        <div class="crosshair bottom-right"></div>
+        
+        <div class="hud-top-left">
+            <span class="blinking-rec">● REC</span>
+            <span class="time-code" id="hud-time">00:00:00:00</span>
+        </div>
+        
+        <div class="hud-top-right">
+            <div class="battery-bar">
+                <div class="battery-fill"></div>
+            </div>
+            <span>SYS_POWER: 99%</span>
+        </div>
+
+        <div class="hud-bottom-left">
+            <div id="hex-scroll"></div>
+        </div>
+        
+        <div class="hud-bottom-right">
+            <span>UPLINK: SECURE</span><br>
+            <span>PING: 12ms</span>
+        </div>
+    </div>
+
+    <!-- 3D GRID BACKGROUND -->
+    <div class="grid-container">
+        <div class="cyber-grid"></div>
+    </div>
+
+    <!-- ENTRANCE -->
+    <div id="entrance">
+        <div class="entrance-panel">
+            <h1 class="glitch-text" data-text="SYSTEM LOCK">SYSTEM LOCK</h1>
+            <p>BIOMETRIC SCAN REQUIRED...</p>
+            <button id="enter-btn" class="cyber-btn">INITIATE OVERRIDE</button>
+        </div>
+    </div>
+
+    <!-- MAIN PORTFOLIO -->
+    <div id="main-content" class="hidden">
+        <div id="player" style="position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none;"></div>
+        
+        <nav class="cyber-nav">
+            <div class="logo">OPERATIVE_RS</div>
+            <div class="links">
+                <a href="mailto:ramizgshaikh@gmail.com" target="_blank" class="cyber-btn small">COMMS</a>
+                <a href="https://github.com/ZenithOrionis" target="_blank" class="cyber-btn small">GITHUB</a>
+                <a href="https://linkedin.com/in/ramiz-shaikh-4a8998330" target="_blank" class="cyber-btn small">LINKEDIN</a>
+            </div>
+        </nav>
+
+        <header class="hero section-block">
+            <div class="hero-content clip-panel">
+                <h2 class="sys-title">>> IDENTITY VERIFIED</h2>
+                <h1 class="hero-name type-text" data-text="RAMIZ SHAIKH"></h1>
+                <p class="subtitle type-text-delay" data-text="CLASS: ??? // ALLEGIANCE: ???"></p>
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <span class="stat-label">STRENGTH</span>
+                        <div class="stat-bar"><div class="fill" style="width: 0%;"></div></div>
+                        <span class="stat-num">???</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">DEXTERITY</span>
+                        <div class="stat-bar"><div class="fill" style="width: 0%;"></div></div>
+                        <span class="stat-num">???</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">INTELLIGENCE</span>
+                        <div class="stat-bar"><div class="fill" style="width: 0%;"></div></div>
+                        <span class="stat-num">???</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">STEALTH</span>
+                        <div class="stat-bar"><div class="fill" style="width: 0%;"></div></div>
+                        <span class="stat-num">???</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">CHARISMA</span>
+                        <div class="stat-bar"><div class="fill" style="width: 0%;"></div></div>
+                        <span class="stat-num">???</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-label">REPUTATION</span>
+                        <div class="stat-bar"><div class="fill" style="width: 0%;"></div></div>
+                        <span class="stat-num">???</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="content-section section-block" id="education">
+            <h2 class="section-heading glitch-text" data-text="[ TRACK RECORD ]">[ TRACK RECORD ]</h2>
+            <div class="cyber-card">
+                <div class="card-header">
+                    <h3>FOUNDATIONAL TRAINING</h3>
+                    <span class="badge">COMPLETED</span>
+                </div>
+                <div class="card-body">
+                    <p class="role">> Pimpri Chinchwad College of Engineering</p>
+                    <p class="desc">B.Tech. in Computer Engineering (2023 - 2026). Specialization: Cybersecurity (Hons).</p>
+                    <p class="sys-msg">STATUS: Advanced cryptography and forensic analysis protocols acquired.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section section-block" id="skills">
+            <h2 class="section-heading glitch-text" data-text="[ SKILL TREE ]">[ SKILL TREE ]</h2>
+            <div class="skill-tree">
+                <div class="skill-branch">
+                    <h3 class="branch-title">OFFENSIVE</h3>
+                    <ul class="skill-list">
+                        <li>> NESSUS_SCANNING_v2.1</li>
+                        <li>> WIRESHARK_PACKET_SNIFF</li>
+                        <li>> THREAT_DETECTION</li>
+                    </ul>
+                </div>
+                <div class="skill-branch">
+                    <h3 class="branch-title">DEFENSIVE</h3>
+                    <ul class="skill-list">
+                        <li>> LOG_ANALYSIS_MATRIX</li>
+                        <li>> NETWORK_SEC_FIREWALL</li>
+                        <li>> INCIDENT_RESPONSE</li>
+                    </ul>
+                </div>
+                <div class="skill-branch">
+                    <h3 class="branch-title">CORE_SYS</h3>
+                    <ul class="skill-list">
+                        <li>> LINUX_KERNEL</li>
+                        <li>> PYTHON_AUTOMATION</li>
+                        <li>> SQL_DATABASE</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section section-block" id="experience">
+            <h2 class="section-heading glitch-text" data-text="[ COMBAT LOGS ]">[ COMBAT LOGS ]</h2>
+            
+            <div class="cyber-card">
+                <div class="card-header">
+                    <h3>MISSION: DECENTRALIZED TRUST</h3>
+                    <span class="badge alert">LFX_MENTEE</span>
+                </div>
+                <div class="card-body">
+                    <div class="mission-stats">
+                        <span>> THREAT LEVEL: HIGH</span>
+                        <span>> YEAR: 2025</span>
+                        <span>> STATUS: SUCCESS</span>
+                    </div>
+                    <p class="desc">Deployed and benchmarked unikernel-based Credo controller and mediator instances against traditional containerized deployments.</p>
+                    <p class="desc highlight">> Authored technical reports and deployment guides for scalable, secure DID infrastructure. Traditional containers left in the dust.</p>
+                </div>
+            </div>
+            
+            <div class="cyber-card">
+                <div class="card-header">
+                    <h3>MISSION: PROJECT ANANTAM</h3>
+                    <span class="badge">DIR_AUTOMATION</span>
+                </div>
+                <div class="card-body">
+                    <div class="mission-stats">
+                        <span>> SECTOR: AEROSPACE</span>
+                        <span>> YEAR: 2024-25</span>
+                        <span>> STATUS: ONGOING</span>
+                    </div>
+                    <p class="desc">Led an intern squadron in developing custom scripts and control algorithms for rocket system automation.</p>
+                    <p class="desc highlight">> Integrated sensor data processing pipelines to enhance telemetry accuracy and real-time decision-making capabilities.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section section-block" id="projects">
+            <h2 class="section-heading glitch-text" data-text="[ WEAPON SCHEMATICS ]">[ WEAPON SCHEMATICS ]</h2>
+            
+            <div class="schematic-card">
+                <div class="schematic-img">
+                    <pre>
+   _____       __           ________ 
+  / ___/____  / /____  ____/  _/   | 
+  \__ \/ __ \/ __/ _ \/ ___/ // /| | 
+ ___/ / /_/ / /_/  __/ / _/ // ___ | 
+/____/\____/\__/\___/_/ /___/_/  |_| 
+                    </pre>
+                </div>
+                <div class="schematic-info">
+                    <h3>SoterIA (Agentic SOC)</h3>
+                    <p>Automated threat detection and incident response system leveraging local LLMs and a multi-agent framework. Built to proactively analyze and mitigate security events before they breach the perimeter.</p>
+                </div>
+            </div>
+
+            <div class="schematic-card">
+                <div class="schematic-img">
+                    <pre>
+    __  ___   ______ __ 
+   / / / / | / /  _// /__
+  / / / /  |/ // / / //_/
+ / /_/ / /|  // / / ,<   
+ \____/_/ |_/___//_/|_|  
+                    </pre>
+                </div>
+                <div class="schematic-info">
+                    <h3>Unikernel Web Server</h3>
+                    <p>High-performance web server built with NGINX and UniKraft. Yielded 3.1x higher throughput and 3x lower latency compared to standard Linux deployments.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="cyber-footer">
+            <p>>> CONNECTION TERMINATED.</p>
+            <div class="barcode"></div>
+        </footer>
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="main.js"></script>
+</body>
+</html>
